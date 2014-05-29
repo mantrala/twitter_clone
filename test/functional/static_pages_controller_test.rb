@@ -22,4 +22,10 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select('title', 'TwitterClone | About Us')
   end
 
+  def test_contact
+    get :contact
+    assert_response(:success, :template => "contact")
+    assert_select("h1", "Contact")
+    assert_select('title', 'TwitterClone | Contact')
+  end
 end
