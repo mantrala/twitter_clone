@@ -4,7 +4,7 @@ class StaticPagesControllerTest < ActionController::TestCase
   def test_home
     get :home
     assert_response(:success, :template => "home")
-    assert_select('h1', 'Sample App')
+    assert_select('h1', 'Welcome to Twitter Clone')
     assert_select('title', 'TwitterClone | Home')
   end
 
