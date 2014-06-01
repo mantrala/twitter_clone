@@ -1,5 +1,4 @@
 TwitterClone::Application.routes.draw do
-  get "users/new"
 
   get "static_pages/home"
 
@@ -7,6 +6,8 @@ TwitterClone::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/signup',  to: 'users#new'
+
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
