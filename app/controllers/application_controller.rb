@@ -7,5 +7,5 @@ class ApplicationController < ActionController::Base
     sign_out
     super
   end
-  
+
 end

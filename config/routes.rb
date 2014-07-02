@@ -8,7 +8,8 @@ TwitterClone::Application.routes.draw do
   match '/signup',  to: 'users#new'
 
   resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
+  resources :sessions,  :only => [:new, :create, :destroy]
+  resources :microposts, :only => [:create, :destroy]
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
